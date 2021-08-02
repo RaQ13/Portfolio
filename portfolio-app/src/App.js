@@ -1,6 +1,21 @@
+import {
+  HashRouter,
+  Route,
+  Link,
+  Switch,
+  NavLink,
+} from "react-router-dom";
+import {Home} from "./components/Home";
+
 function App() {
   return (
-      <h1>Working</h1>
+      <>
+        <HashRouter>
+            <>
+                <Route exact path='/' component={Home} />
+            </>
+        </HashRouter>
+      </>
   );
 }
 

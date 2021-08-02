@@ -2,7 +2,66 @@
 @import "./settings/reset";
 @import "./settings/colors";
 
+.header__container {
+  max-width: 1860px;
+  margin: 0 auto;
+}
 
-h1 {
-  font-family: $font-alt;
+header {
+  height: 80vh;
+  background: url("/assets/Home-Hero-Image.jpg");
+  background-repeat: no-repeat;
+  background-position-x: -480px;
+  display: flex;
+  flex-direction: column;
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    .header-nav-login, .header-nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      margin-right: 140px;
+      li {
+        font-size: 20px;
+        margin-left: 35px;
+        padding: 10px 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+      }
+      .header-nav-login-element {
+        font-size: 16px;
+        a {
+          opacity: 0.5;
+        }
+      }
+      li:hover, .header-nav-login-element:hover  {
+        border: 1px solid $border-color;
+      }
+      .header-nav-login-element:hover {
+        border-color: $columns-background;
+      }
+    }
+  }
+  .header__start {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    .header__start__container{
+      display: flex;
+      position: relative;
+      bottom: 130px;
+      flex-direction: column;;
+      text-align: center;
+      margin-right: 280px;
+      h1 {
+        font-family: $font-base;
+        font-size: 40px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
 }
