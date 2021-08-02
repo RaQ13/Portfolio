@@ -1,3 +1,5 @@
+import Decoration from "../assets/Decoration.svg";
+
 export const Header = () => {
     return (
         <header>
@@ -35,8 +37,11 @@ export const Header = () => {
                         <br></br>
                         Oddaj niechciane rzeczy w zaufane ręce
                     </h1>
-                    <button>Oddaj rzeczy</button>
-                    <button>Zorganizuj Zbiórkę</button>
+                    <img className="decoration" src={Decoration} alt="decoration" />
+                    <div className="header__start__buttons">
+                        <button>Oddaj <br></br>rzeczy</button>
+                        <button>Zorganizuj Zbiórkę</button>
+                    </div>
                 </div>
             </div>
         </header>

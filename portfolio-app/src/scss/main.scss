@@ -55,13 +55,37 @@ header {
       bottom: 130px;
       flex-direction: column;;
       text-align: center;
-      margin-right: 280px;
+      margin-right: 260px;
       h1 {
         font-family: $font-base;
         font-size: 40px;
         margin: 0 auto;
         width: 100%;
       }
+      .decoration {
+        margin: 40px auto;
+        width: 50%;
+        margin-bottom: 80px;
+      }
+      .header__start__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        button {
+          font: normal normal 300 36px/46px $font-base;
+          text-transform: uppercase;
+          width: 44%;
+          background-color: transparent;
+          border: 1px solid $border-color;
+          padding: 20px;
+          margin: 0 20px;
+        }
+      }
     }
   }
+}
+.header__three__columns {
+  display: flex;
+  justify-content: space-around;
+  background-color: $columns-background;
 }
