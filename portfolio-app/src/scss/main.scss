@@ -162,6 +162,9 @@ header {
       p {
         text-align: center;
         width: 70%;
+        font-family: $font-alt;
+        font-size: 12px;
+        line-height: 1rem;
       }
     }
   }
@@ -173,5 +176,49 @@ header {
     border: 1px solid $border-color;
     padding: 20px 10px 20px 10px;
     margin: 10px 0 70px 0;
+  }
+}
+
+.about__us_container {
+  display: flex;
+  flex-direction: row;
+  height: 55vh;
+  background-color: $section-background;
+  .about__us__description, .about__us__image {
+    width: 50%;
+  }
+  .about__us__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 200px;
+    h2 {
+      font-family: $font-base;
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+    p {
+      text-align: center;
+      width: 60%;
+      font-family: $font-base;
+      font-size: 30px;
+      margin-top: 50px;
+      line-height: 3rem;
+    }
+    .about__us__signature {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-right: 100px;
+      margin-bottom: 150px;
+    }
+  }
+  .about__us__image{
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
