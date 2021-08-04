@@ -1,15 +1,16 @@
-import Decoration from "../assets/Decoration.svg";
 import Icon1 from "../assets/Icon-1.svg";
 import Icon2 from "../assets/Icon-2.svg";
 import Icon3 from "../assets/Icon-3.svg";
 import Icon4 from "../assets/Icon-4.svg";
+import {Button} from "./Button";
+import {DecoratedHeader} from "./DecoratedHeader";
+import {Link} from "react-router-dom";
 
 export const Home4Steps = () => {
     return (
         <>
             <div className="four__steps__container">
-                <h2>Wystarczą 4 proste kroki</h2>
-                <img className="decoration" src={Decoration} alt="decoration" />
+                <DecoratedHeader text={`Wystarczą 4 proste kroki`}/>
                 <div className="four__steps__columns">
                     <div className="four__steps__column">
                         <img className="four--steps--icon" src={Icon1} alt="icon1" />
@@ -32,7 +33,9 @@ export const Home4Steps = () => {
                         <p>kurier przyjedzie w dogodnym terminie</p>
                     </div>
                 </div>
-                <button>oddaj <br></br> rzeczy</button>
+                <Link to="/login">
+                    <Button text={`Oddaj_rzeczy`}></Button>
+                </Link>
             </div>
         </>
     )

@@ -1,13 +1,12 @@
-import Decoration from "../assets/Decoration.svg";
 import Signature from "../assets/Signature.svg";
 import People from "../assets/People.jpg";
+import {DecoratedHeader} from "./DecoratedHeader";
 
 export const HomeAboutUs = () => {
     return (
-        <div className="about__us_container">
+        <div className="about__us_container" id="aboutUs">
             <div className="about__us__description">
-                <h2>O nas</h2>
-                <img className="about__us__decoration" src={Decoration} alt="decoration" />
+                <DecoratedHeader text={`O nas`}/>
                 <p>
                     Nori grape silver beet broccoli kombu beet greens fava
                     bean potato quandong celery. Bunya nuts black-eyed pea

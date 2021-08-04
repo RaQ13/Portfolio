@@ -2,10 +2,92 @@
 @import "./settings/reset";
 @import "./settings/colors";
 
-.header__container {
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+
+.header__container, .not__found, .login__container {
   max-width: 1860px;
   margin: 0 auto;
 }
+
+.action--button {
+  font: normal normal 300 36px/46px $font-base;
+  background-color: transparent;
+  border: 1px solid $border-color;
+  text-transform: uppercase;
+}
+
+.login__page {
+  height: 70vh;
+  .login__header {
+    background: none;
+    height: 100px;
+  }
+  .login__container {
+    height: 70vh;
+    display: flex;
+    @include center;
+    justify-content: flex-start;
+    margin-top: 200px;
+    h2 {
+      font-family: $font-base;
+      font-size: 40px;
+      margin: 0 auto 20px auto;
+    }
+    .login__form {
+      @include center;
+      margin: 30px auto 20px auto;
+      background-color: $section-background;
+      padding: 20px 40px;
+      label {
+        width: 100%;
+        font-family: $font-alt;
+        font-size: 13px;
+        padding: 20px 0;
+      }
+      input {
+        background: none;
+        border: none;
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 20px;
+      }
+    }
+    .login__buttons {
+      @include center;
+      flex-direction: row;
+      justify-content: space-between;
+      button {
+        font-size: 13px;
+        margin: 0 90px 0 90px;
+      }
+    }
+  }
+}
+
+.not__found {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-family: $font-base;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
+
 
 header {
   height: 75vh;
@@ -19,7 +101,7 @@ header {
     display: flex;
     flex-direction: column;
     .header-nav-login, .header-nav-links {
-      display: flex;
+      @include center;
       flex-direction: row;
       justify-content: flex-end;
       margin-bottom: 20px;
@@ -46,9 +128,8 @@ header {
     }
   }
   .header__start {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include center;
+    align-items: flex-end;
     height: 100%;
     .header__start__container{
       display: flex;
@@ -57,7 +138,10 @@ header {
       flex-direction: column;;
       text-align: center;
       margin-right: 260px;
-      h1 {
+      h2:first-child {
+        margin-bottom: 10px;
+      }
+      h2 {
         font-family: $font-base;
         font-size: 40px;
         margin: 0 auto;
@@ -72,14 +156,26 @@ header {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        button {
-          font: normal normal 300 36px/46px $font-base;
-          text-transform: uppercase;
-          width: 44%;
-          background-color: transparent;
-          border: 1px solid $border-color;
-          padding: 20px;
-          margin: 0 20px;
+        a {
+          width: 100%;
+          position: relative;
+          button {
+            width: 70%;
+            padding: 20px;
+            margin: 0 20px;
+          }
+        }
+        a:first-child {
+          button {
+            position: absolute;
+            right: 0;
+          }
+        }
+        a:last-child {
+          button {
+            position: absolute;
+            left: 0;
+          }
         }
       }
     }
@@ -117,10 +213,7 @@ header {
 
 
 .four__steps__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include center;
   h2 {
     font-family: $font-base;
     font-size: 38px;
@@ -168,14 +261,12 @@ header {
       }
     }
   }
-  button {
-    font: normal normal 300 36px/46px $font-base;
-    text-transform: uppercase;
-    width: 25%;
-    background-color: transparent;
-    border: 1px solid $border-color;
-    padding: 20px 10px 20px 10px;
+  a {
     margin: 10px 0 70px 0;
+    button {
+      width: 100%;
+      padding: 20px 80px 20px 80px;
+    }
   }
 }
 
@@ -188,9 +279,8 @@ header {
     width: 50%;
   }
   .about__us__description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include center;
+    justify-content: flex-start;
     position: relative;
     margin-top: 200px;
     h2 {
@@ -221,4 +311,9 @@ header {
       width: 100%;
     }
   }
+}
+
+
+.who__we__help__container {
+  height: 55vh;
 }
