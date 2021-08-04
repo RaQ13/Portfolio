@@ -1,9 +1,7 @@
 import {
   HashRouter,
   Route,
-  Link,
-  Switch,
-  NavLink,
+  Switch
 } from "react-router-dom";
 import {Home} from "./components/Home";
 
@@ -11,9 +9,9 @@ function App() {
   return (
       <>
         <HashRouter>
-            <>
+            <Switch>
                 <Route exact path='/' component={Home} />
-            </>
+            </Switch>
         </HashRouter>
       </>
   );
