@@ -175,6 +175,7 @@ header {
           button {
             position: absolute;
             left: 0;
+            padding-left: 10px;
           }
         }
       }
@@ -282,7 +283,7 @@ header {
     @include center;
     justify-content: flex-start;
     position: relative;
-    margin-top: 200px;
+    margin-top: 10%;
     h2 {
       font-family: $font-base;
       font-size: 38px;
@@ -300,8 +301,8 @@ header {
       position: absolute;
       right: 0;
       bottom: 0;
-      margin-right: 100px;
-      margin-bottom: 150px;
+      margin-right: 10%;
+      margin-bottom: 15%;
     }
   }
   .about__us__image{
@@ -316,4 +317,85 @@ header {
 
 .who__we__help__container {
   height: 55vh;
+  @include center;
+  justify-content: flex-start;
+  h2 {
+    font-family: $font-base;
+    font-size: 38px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+  }
+  .who__we__help__buttons {
+    @include center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 40%;
+    button:first-child {
+      padding: 22px 20px;
+    }
+    button {
+      border: 1px solid transparent;
+      font-size: 24px;
+      padding: 10px 20px;
+      line-height: 1.5rem;
+    }
+    button:hover {
+      border: 1px solid $border-color;
+    }
+    button:last-child {
+      margin-right: 15px;
+    }
+  }
+  p {
+    font-size: 20px;
+    text-align: center;
+    width: 28%;
+    margin-top: 60px;
+  }
+  .who__we__help__box {
+    width: 100%;
+    .box__paragraph {
+      @include center;
+      .paragraph {
+        @include center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 70%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        .paragraph__description {
+          @include center;
+          p {
+            text-align: left;
+            width: 100%;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 25px;
+          }
+          span {
+            font-family: $font-alt;
+            font-style: italic;
+          }
+        }
+        .paragraph__example {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+  .box__buttons {
+    @include center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15%;
+    margin-top: 40px;
+    button {
+      border: 1px solid transparent;
+    }
+    button:hover {
+      border: 1px solid $border-color;
+    }
+  }
 }

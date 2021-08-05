@@ -35,9 +35,18 @@ export const NavBar = () => {
                         <a>O nas</a>
                     </li>
                 </Link>
-                <li className="header-nav-links-element">
-                    <a>Fundacja i organizacje</a>
-                </li>
+                <Link
+                    activeClass="active"
+                    to="whoWeHelp"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    <li className="header-nav-links-element">
+                        <a>Fundacja i organizacje</a>
+                    </li>
+                </Link>
                 <li className="header-nav-links-element">
                     <a>Kontakt</a>
                 </li>
