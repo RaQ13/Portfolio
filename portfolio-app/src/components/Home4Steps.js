@@ -34,7 +34,7 @@ export const Home4Steps = () => {
                     </div>
                 </div>
                 <Link to="/login">
-                    <Button text={`Oddaj_rzeczy`}></Button>
+                    <Button text={`Oddaj rzeczy`}></Button>
                 </Link>
             </div>
         </>

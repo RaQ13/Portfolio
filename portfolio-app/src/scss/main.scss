@@ -16,6 +16,10 @@ a:visited {
   color: black;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .header__container, .not__found, .login__container {
   max-width: 1860px;
   margin: 0 auto;
@@ -92,7 +96,7 @@ a:visited {
 header {
   height: 75vh;
   background: url("/assets/Home-Hero-Image.jpg");
-  background-size: 50% 100%;
+  background-size: 60% 100%;
   background-repeat: no-repeat;
   background-position-x: -280px;
   display: flex;
@@ -183,16 +187,16 @@ header {
   }
 }
 
-
-
 .header__three__columns {
   display: flex;
   justify-content: space-around;
   background-color: $columns-background;
+
   .column {
     text-align: center;
     width: 20%;
     font-family: $font-base;
+
     h2 {
       font-size: 90px;
       margin-top: 50px;
@@ -208,6 +212,7 @@ header {
       margin-top: 30px;
       margin-bottom: 80px;
       font-size: 16px;
+      line-height: 1.5rem;
     }
   }
 }
@@ -263,9 +268,11 @@ header {
     }
   }
   a {
+    width: 30%;
     margin: 10px 0 70px 0;
+    @include center;
     button {
-      width: 100%;
+      width: 70%;
       padding: 20px 80px 20px 80px;
     }
   }
@@ -281,9 +288,8 @@ header {
   }
   .about__us__description {
     @include center;
-    justify-content: flex-start;
-    position: relative;
-    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
     h2 {
       font-family: $font-base;
       font-size: 38px;
@@ -291,18 +297,19 @@ header {
     }
     p {
       text-align: center;
-      width: 60%;
+      width: 70%;
       font-family: $font-base;
       font-size: 30px;
       margin-top: 50px;
       line-height: 3rem;
     }
     .about__us__signature {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      margin-right: 10%;
-      margin-bottom: 15%;
+      margin-top: 40px;
+      width: 60%;
+      height: 10%;
+      .signature {
+        float: right;
+      }
     }
   }
   .about__us__image{

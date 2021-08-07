@@ -12,7 +12,9 @@ export const HomeAboutUs = () => {
                     bean potato quandong celery. Bunya nuts black-eyed pea
                     prairie turnip leek lentil turnip greens parsnip.
                 </p>
-                <img className="about__us__signature" src={Signature} alt="signature" />
+                <div className="about__us__signature">
+                    <img className="signature" src={Signature} alt="signature" />
+                </div>
             </div>
             <div className="about__us__image">
                 <img src={People} alt="people"/>

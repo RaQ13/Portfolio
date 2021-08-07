@@ -1,7 +1,7 @@
 import {BoxParagraph} from "./BoxParagraph";
 
 export const Box = (props) => {
-    return (
+    return(
         <>
             <BoxParagraph organizationName={props.organization1Name}
                           organizationDescription={props.organization1Description}

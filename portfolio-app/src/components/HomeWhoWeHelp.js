@@ -6,33 +6,54 @@ import React, { useState } from "react";
 export const HomeWhoWeHelp = () => {
 
     const [organization, setOrganization] = useState({
-        organization1Name: `Organizacja "Lorem Ipsum1"`,
-        organization1Description: `Quis varius quam quisque id diam vel quam elementum pulvinar`,
-        organization1Example: `Egestas, sed, tempus`
+        Name1: `Organizacja "Lorem Ipsum1"`,
+        Description1: `Quis varius quam quisque id diam vel quam elementum pulvinar`,
+        Example1: `Egestas, sed, tempus`,
+        Name2: `Organizacja "Lorem Ipsum2"`,
+        Description2: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.`,
+        Example2: `Ut, aliquam, purus, sit, amet`,
+        Name3: `Organizacja "Lorem Ipsum3"`,
+        Description3: `Scelerisque in dictum non consectetur a erat nam..`,
+        Example3: `Mi, quis, hendrerit, dolor`
     })
 
     const [fundation, SetFundation] = useState({
-        fundation1Name: `Fundacja "Dbam o Zdrowie"`,
-        fundation1Description: `Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.`,
-        fundation1Example: `ubrania, jedzenie, sprzęd AGD, meble, zabawki`,
-        fundation2Name: `Fundacja "Dla dzieci"`,
-        fundation2Description: `Cel i misja: Pomoc dzieciom z ubogich rodzin..`,
-        fundation2Example: `ubrania, meble, zabawki`,
-        fundation3Name: `Fundacja "Bez domu"`,
-        fundation3Description: `Cel i misja: Pomoc dla osób nie posiadajacych zamieszkania..`,
-        fundation3Example: `ubrania, jedzenie, ciepłe koce`,
+        Name1: `Fundacja "Dbam o Zdrowie"`,
+        Description1: `Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.`,
+        Example1: `ubrania, jedzenie, sprzęd AGD, meble, zabawki`,
+        Name2: `Fundacja "Dla dzieci"`,
+        Description2: `Cel i misja: Pomoc dzieciom z ubogich rodzin..`,
+        Example2: `ubrania, meble, zabawki`,
+        Name3: `Fundacja "Bez domu"`,
+        Description3: `Cel i misja: Pomoc dla osób nie posiadajacych zamieszkania..`,
+        Example3: `ubrania, jedzenie, ciepłe koce`,
     })
 
+    const [collection, setCollection] = useState({
+        Name1: `Zbiórka “Lorem Ipsum 1”`,
+        Description1: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+        Example1: `Egestas, tempus`,
+        Name2: `Zbiórka “Lorem Ipsum 2”`,
+        Description2: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.`,
+        Example2: `Ut, aliquam, sit, amet`,
+        Name3: `Zbiórka “Lorem Ipsum 3”`,
+        Description3: `Scelerisque in dictum non consectetur a erat nam.`,
+        Example3: `Mi, quis, dolor`,
+    })
+
+    const [activeBox, setActiveBox] = useState(false);
+    const hidden = activeBox ? "" : "hidden";
+
     const ChandleOrganizationBox = (ev) => {
-        console.log(ev.target);
+
         if (ev.target.innerText === "FUNDACJOM") {
-            console.log("fun");
+            setActiveBox(fundation);
         }
         if (ev.target.innerText === "ORGANIZACJOM POZARZĄDOWYM") {
-            console.log("org");
+            setActiveBox(organization);
         }
         if (ev.target.innerText === "LOKALNYM ZBIÓRKOM") {
-            console.log("lok");
+            setActiveBox(collection);
         }
     }
 
@@ -42,8 +63,8 @@ export const HomeWhoWeHelp = () => {
             <DecoratedHeader text={`Komu pomagamy?`}/>
             <div className="who__we__help__buttons">
                 <Button text={`Fundacjom`} />
-                <Button text={`Organizacjom_pozarządowym`} />
-                <Button text={`Lokalnym_zbiórkom`} />
+                <Button text={`Organizacjom pozarządowym`} />
+                <Button text={`Lokalnym zbiórkom`} />
             </div>
             <p>
                 W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z
@@ -51,16 +72,16 @@ export const HomeWhoWeHelp = () => {
                 komu pomagają i czego potrzebują.
             </p>
             <div className="who__we__help__box">
-                <div className="box__paragraph">
-                    <Box  organization1Name={fundation.fundation1Name}
-                          organization1Description={fundation.fundation1Description}
-                          organization1Examples={fundation.fundation1Example}
-                          organization2Name={fundation.fundation2Name}
-                          organization2Description={fundation.fundation2Description}
-                          organization2Examples={fundation.fundation2Example}
-                          organization3Name={fundation.fundation3Name}
-                          organization3Description={fundation.fundation3Description}
-                          organization3Examples={fundation.fundation3Example}/>
+                <div className={`box__paragraph ${hidden}`}>
+                    <Box  organization1Name={activeBox.Name1}
+                          organization1Description={activeBox.Description1}
+                          organization1Examples={activeBox.Example1}
+                          organization2Name={activeBox.Name2}
+                          organization2Description={activeBox.Description2}
+                          organization2Examples={activeBox.Example2}
+                          organization3Name={activeBox.Name3}
+                          organization3Description={activeBox.Description3}
+                          organization3Examples={activeBox.Example3}/>
                 </div>
             </div>
             <div className="box__buttons">

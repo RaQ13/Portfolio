@@ -1,9 +1,9 @@
 import Decoration from "../assets/Decoration.svg";
 
-export const DecoratedHeader = (props) => {
+export const DecoratedHeader = ({text}) => {
     return (
         <>
-            <h2>{props.text}</h2>
+            <h2>{text}</h2>
             <img className="decoration" src={Decoration} alt="decoration" />
         </>
     )
