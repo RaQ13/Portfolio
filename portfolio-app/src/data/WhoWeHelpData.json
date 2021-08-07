@@ -1,7 +1,66 @@
 [
   {
-    "fundation": [],
-    "organization": [],
-    "collection:": []
+    "data": [
+      [
+        {
+          "Name1": "Organizacja “Lorem Ipsum 1”",
+          "Description1": "Quis varius quam quisque id diam vel quam elementum pulvinar",
+          "Example1": "Egestas, sed, tempus",
+          "Name2": "Organizacja “Lorem Ipsum 2”",
+          "Description2": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "Example2": "Ut, aliquam, purus, sit, amet",
+          "Name3": "Organizacja “Lorem Ipsum 3”",
+          "Description3": "Scelerisque in dictum non consectetur a erat nam..",
+          "Example3": "Mi, quis, hendrerit, dolor",
+          "Name4": "Organizacja “Lorem Ipsum 1”",
+          "Description4": "Quis varius quam quisque id diam vel quam elementum pulvinar",
+          "Example4": "Egestas, sed, tempus",
+          "Name5": "Organizacja “Lorem Ipsum 2”",
+          "Description5": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "Example5": "Ut, aliquam, purus, sit, amet"
+        }
+      ],
+      [
+        {
+          "Name1": "Fundacja “Dbam o zdrowie”",
+          "Description1": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "Example1": "ubrania, jedzenie, sprzęd AGD, meble, zabawki",
+          "Name2": "Fundacja “Dla dzieci”",
+          "Description2": "Cel i misja: Pomoc dzieciom z ubogich rodzin..",
+          "Example2": "ubrania, meble, zabawki",
+          "Name3": "Fundacja “Bez domu”",
+          "Description3": "Cel i misja: Pomoc dla osób nie posiadajacych zamieszkania..",
+          "Example3": "ubrania, jedzenie, ciepłe koce",
+          "Name4": "Fundacja “Dbam o zdrowie”",
+          "Description4": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "Example4": "ubrania, jedzenie, sprzęd AGD, meble, zabawki",
+          "Name5": "Fundacja “Dla dzieci”",
+          "Description5": "Cel i misja: Pomoc dzieciom z ubogich rodzin..",
+          "Example5": "ubrania, meble, zabawki",
+          "Name6": "Fundacja “Bez domu”",
+          "Description6": "Cel i misja: Pomoc dla osób nie posiadajacych zamieszkania..",
+          "Example6": "ubrania, jedzenie, ciepłe koce",
+          "Name7": "Fundacja “Dbam o zdrowie”",
+          "Description7": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "Example7": "ubrania, jedzenie, sprzęd AGD, meble, zabawki",
+          "Name8": "Fundacja “Dla dzieci”",
+          "Description8": "Cel i misja: Pomoc dzieciom z ubogich rodzin..",
+          "Example8": "ubrania, meble, zabawki"
+        }
+      ],
+      [
+        {
+          "Name1": "Zbiórka “Lorem Ipsum 1”",
+          "Description1": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "Example1": "Egestas, tempus",
+          "Name2": "Zbiórka “Lorem Ipsum 2”",
+          "Description2": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "Example2": "Ut, aliquam, sit, amet",
+          "Name3": "Zbiórka “Lorem Ipsum 3”",
+          "Description3": "Scelerisque in dictum non consectetur a erat nam.",
+          "Example3": "Mi, quis, dolor"
+        }
+      ]
+    ]
   }
 ]
