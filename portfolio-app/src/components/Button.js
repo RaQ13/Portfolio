@@ -1,5 +1,5 @@
-export const Button = (props) => {
+export const Button = ({text, paginate}) => {
     return (
-        <button className="action--button">{props.text}</button>
+        <button onClick={() => paginate(text)} className="action--button">{text}</button>
     )
 }

@@ -398,11 +398,15 @@ header {
     }
   }
   .box__buttons {
-    @include center;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 15%;
-    margin-top: 40px;
+    nav {
+      ul {
+        @include center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 15%;
+        margin-top: 40px;
+      }
+    }
     button {
       border: 1px solid transparent;
     }

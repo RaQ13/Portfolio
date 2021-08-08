@@ -29,7 +29,8 @@ export const NavBar = () => {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={1200}
+                    delay={250}
                 >
                     <li className="header-nav-links-element">
                         <a>O nas</a>
@@ -41,7 +42,8 @@ export const NavBar = () => {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={1200}
+                    delay={250}
                 >
                     <li className="header-nav-links-element">
                         <a>Fundacja i organizacje</a>

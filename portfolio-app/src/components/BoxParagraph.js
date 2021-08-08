@@ -2,24 +2,22 @@ export const BoxParagraph = ({data, loading}) => {
 
     if (loading) {
         return <h2>Loading...</h2>
-    } else
+    }
 
     return (
         <ul className="paragraph">
-            {data[0].map(function (line){
-                console.log(line.id);
-                console.log(line.Name);
+            {data.map(function (line){
                 return <li key={line.id}>
                     <div className="paragraph__description">
                         <p>
-                            {line.Name}
+                            {line.title}
                         </p>
                         <span>
-                            {line.Description}
+                            {line.body}
                         </span>
                     </div>
                     <div className="paragraph__example">
-                        {line.Example}
+                        {line.userId}
                     </div>
                 </li>
             })}
