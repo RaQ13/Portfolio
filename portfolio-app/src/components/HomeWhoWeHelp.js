@@ -13,29 +13,44 @@ export const HomeWhoWeHelp = () => {
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [linesPerPage, setLinesPerPage] = useState(3);
+    const [currentBox, setCurrentBox] = useState([]);
 
     useEffect(() => {
         const fetchBoxData = async () => {
             setLoading(true);
-            const res = await axios.get(`https://jsonplaceholder.typicode.com/posts`);
+            const res = await axios.get(`${API}/data`);
             setBoxData(res.data);
             setLoading(false)
         }
         fetchBoxData();
     },[]);
 
-    console.log(boxData);
     const indexOfLastLine = currentPage * linesPerPage;
     const indexOfFirstLine = indexOfLastLine - linesPerPage;
-    const currentLines = boxData.slice(indexOfFirstLine, indexOfLastLine);
+    const currentLines = currentBox.slice(indexOfFirstLine, indexOfLastLine);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
+    const CurrentBox = (ev) => {
+
+        const fetchCurrentBox = async (ev) => {
+            if (ev.target.innerText === "FUNDACJOM") {
+                setCurrentBox(boxData[1]);
+            }
+            if (ev.target.innerText === "ORGANIZACJOM POZARZĄDOWYM") {
+                setCurrentBox(boxData[0]);
+            }
+            if (ev.target.innerText === "LOKALNYM ZBIÓRKOM") {
+                setCurrentBox(boxData[2]);
+            }
+        }
+        fetchCurrentBox(ev);
+    }
 
     return (
         <div className="who__we__help__container" id="whoWeHelp">
             <DecoratedHeader text={`Komu pomagamy?`}/>
-            <div className="who__we__help__buttons">
+            <div onClick={(ev => {CurrentBox(ev)})} className="who__we__help__buttons">
                 <Button text={`Fundacjom`} />
                 <Button text={`Organizacjom pozarządowym`} />
                 <Button text={`Lokalnym zbiórkom`} />
@@ -51,7 +66,7 @@ export const HomeWhoWeHelp = () => {
                 </div>
             </div>
             <div className="box__buttons">
-                <BoxPagination linesperPage={linesPerPage} totalLines={boxData.length} paginate={paginate}/>
+                <BoxPagination linesperPage={linesPerPage} totalLines={currentBox.length} paginate={paginate}/>
             </div>
         </div>
     )

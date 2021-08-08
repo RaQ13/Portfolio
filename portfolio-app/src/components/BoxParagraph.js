@@ -10,14 +10,14 @@ export const BoxParagraph = ({data, loading}) => {
                 return <li key={line.id}>
                     <div className="paragraph__description">
                         <p>
-                            {line.title}
+                            {line.Name}
                         </p>
                         <span>
-                            {line.body}
+                            {line.Description}
                         </span>
                     </div>
                     <div className="paragraph__example">
-                        {line.userId}
+                        {line.Example}
                     </div>
                 </li>
             })}

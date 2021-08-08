@@ -158,29 +158,26 @@ header {
       }
       .header__start__buttons {
         display: flex;
-        justify-content: space-between;
         width: 100%;
+        position: relative;
         a {
-          width: 100%;
-          position: relative;
+          @include center;
+          width: 40%;
+          position: absolute;
+          right: 0;
           button {
-            width: 70%;
+            width: 100%;
             padding: 20px;
             margin: 0 20px;
           }
         }
         a:first-child {
-          button {
-            position: absolute;
-            right: 0;
-          }
+          left: 0;
+          padding: 0 40px;
+          width: 40%;
         }
         a:last-child {
-          button {
-            position: absolute;
-            left: 0;
-            padding-left: 10px;
-          }
+          margin-right: 40px;
         }
       }
     }
