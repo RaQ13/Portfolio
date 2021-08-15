@@ -12,14 +12,15 @@ export const HomeWhoWeHelp = () => {
     const [boxData, setBoxData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [linesPerPage, setLinesPerPage] = useState(3);
+    const [linesPerPage] = useState(3);
     const [currentBox, setCurrentBox] = useState([]);
 
     useEffect(() => {
         const fetchBoxData = async () => {
             setLoading(true);
             const res = await axios.get(`${API}/data`);
-            setBoxData(res.data);
+            console.log(res.data);
+            setBoxData(res.data.data);
             setLoading(false)
         }
         fetchBoxData();
@@ -36,12 +37,15 @@ export const HomeWhoWeHelp = () => {
         const fetchCurrentBox = async (ev) => {
             if (ev.target.innerText === "FUNDACJOM") {
                 setCurrentBox(boxData[1]);
+                setCurrentPage(1);
             }
             if (ev.target.innerText === "ORGANIZACJOM POZARZĄDOWYM") {
                 setCurrentBox(boxData[0]);
+                setCurrentPage(1);
             }
             if (ev.target.innerText === "LOKALNYM ZBIÓRKOM") {
                 setCurrentBox(boxData[2]);
+                setCurrentPage(1);
             }
         }
         fetchCurrentBox(ev);
@@ -50,7 +54,7 @@ export const HomeWhoWeHelp = () => {
     return (
         <div className="who__we__help__container" id="whoWeHelp">
             <DecoratedHeader text={`Komu pomagamy?`}/>
-            <div onClick={(ev => {CurrentBox(ev)})} className="who__we__help__buttons">
+            <div onClick={(ev) => {CurrentBox(ev)}} className="who__we__help__buttons">
                 <Button text={`Fundacjom`} />
                 <Button text={`Organizacjom pozarządowym`} />
                 <Button text={`Lokalnym zbiórkom`} />

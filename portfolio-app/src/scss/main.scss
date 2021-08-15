@@ -2,6 +2,10 @@
 @import "./settings/reset";
 @import "./settings/colors";
 
+html {
+  font-family: $font-base;
+}
+
 @mixin center {
   display: flex;
   justify-content: center;
@@ -16,8 +20,16 @@ a:visited {
   color: black;
 }
 
-.hidden {
-  visibility: hidden;
+.error {
+  border-bottom: 1px solid red !important;
+}
+.error--message {
+  color: red;
+  font-family: $font-alt;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .header__container, .not__found, .login__container {
@@ -425,6 +437,7 @@ header {
     @include center;
     width: 30%;
     margin-bottom: 15%;
+    margin-right: 7%;
     h2 {
       font-family: $font-base;
       font-size: 38px;
@@ -449,6 +462,7 @@ header {
             width: 100%;
             text-align: left;
             margin-bottom: 10px;
+            margin-left: 2px;
           }
           input {
             width: 95%;
@@ -471,6 +485,7 @@ header {
           font-family: $font-alt;
           font-size: 0.9rem;
           font-weight: 600;
+          margin-left: 2px;
         }
         textarea {
           margin-top: 10px;
@@ -487,13 +502,18 @@ header {
           color: lightgray;
         }
       }
-      button {
-        position: absolute;
-        right: 0;
-        color: $border-color;
-        font-size: 0.9rem;
-        padding: 0 40px;
-        margin-top: 40px;
+      .footer__button__container {
+        @include center;
+        align-items: flex-end;
+        button {
+          position: relative;
+          right: 0;
+          color: $border-color;
+          font-size: 1rem;
+          padding: 0 40px;
+          margin-top: 40px;
+          text-transform: none;
+        }
       }
     }
   }
@@ -508,7 +528,7 @@ header {
 .footer:after {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 110%;
   z-index: -1;
   position: absolute;
   background: url("/assets/Background-Contact-Form.jpg");
