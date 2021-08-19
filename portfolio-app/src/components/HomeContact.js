@@ -8,10 +8,10 @@ import Instagram from "../assets/Instagram.svg";
 export const HomeContact = () => {
 
     useEffect(() => {
-        fetch(`${API}/users`).then(res => res.json()).then(res => console.log(res));
+        fetch(`${API}`).then(res => res.json()).then(res => console.log(res));
     },[]);
 
-    const API = "http://localhost:3000";
+    const API = "https://fer-api.coderslab.pl/v1/portfolio/contact";
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
@@ -39,7 +39,7 @@ export const HomeContact = () => {
             if (emailCheck === -1) {
                 setError(true);
             }
-            if (userMessage.length < 10) {
+            if (userMessage.length < 120) {
                 setError(true);
             }
             else setError(false);
@@ -49,14 +49,14 @@ export const HomeContact = () => {
 
     const SetUserData = () => {
         setUserData({
-            userName: userName,
-            userEmail: userEmail,
-            userMessage: userMessage
+            name: userName,
+            email: userEmail,
+            message: userMessage
         })
     }
 
     const FetchFormData = () => {
-            fetch(`${API}/users`, {
+            fetch(`${API}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

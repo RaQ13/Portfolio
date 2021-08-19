@@ -1,7 +1,7 @@
 const paginationData = require('./WhoWeHelpData.json');
-const contactData = require('./ContactBase.json');
+const usersData = require('./Users.json');
 
 module.exports = () => ({
     data: paginationData,
-    users: contactData
+    users: usersData
 })

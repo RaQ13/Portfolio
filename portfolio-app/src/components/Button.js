@@ -1,7 +1,8 @@
 export const Button = ({text, paginate}) => {
 
     if (typeof paginate !== "function") {
-        return <button type="submit" className="action--button">{text}</button>
+        return <button type="submit"
+                       className="action--button">{text}</button>
     }
 
     return (

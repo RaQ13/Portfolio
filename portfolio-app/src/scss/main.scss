@@ -79,6 +79,10 @@ a:visited {
         margin-bottom: 20px;
       }
     }
+    p {
+      color: red;
+      padding: 0 0 15px 0;
+    }
     .login__buttons {
       @include center;
       flex-direction: row;
