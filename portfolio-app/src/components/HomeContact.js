@@ -7,10 +7,6 @@ import Instagram from "../assets/Instagram.svg";
 
 export const HomeContact = () => {
 
-    useEffect(() => {
-        fetch(`${API}`).then(res => res.json()).then(res => console.log(res));
-    },[]);
-
     const API = "https://fer-api.coderslab.pl/v1/portfolio/contact";
 
     const [userName, setUserName] = useState("");
@@ -23,9 +19,7 @@ export const HomeContact = () => {
         ev.preventDefault();
         ValidateContactFormData(ev);
         SetUserData();
-        if(error === false) {
-            FetchFormData();
-        }
+        FetchFormData();
     }
 
     const ValidateContactFormData = () => {

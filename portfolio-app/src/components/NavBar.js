@@ -7,25 +7,28 @@ import { auth } from "../firebase";
 export const NavBar = () => {
 
     const [currentUser, setCurrentUser] = useState(null);
+    const [userEmail, setUserEmail] = useState(null);
 
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
             if (user) {
                 setCurrentUser(user);
                 localStorage.setItem('currentUser', user.uid);
+                setUserEmail(user.email);
             } else {
                 setCurrentUser(null);
                 localStorage.removeItem('currentUser');
+                setUserEmail(null);
             }
         });
     }, []);
 
     const LoggedIn = () => {
         return (
-           <>
+           <div className="logged__nav">
                {currentUser ? (
                    <>
-                       <h1>Witaj</h1>
+                       <h1>Cześć {userEmail}!</h1>
                        <Button text={`Oddaj rzeczy`}/>
                        <HashLink onClick={handleSignOut}>
                            <Button text={`Wyloguj`}/>
@@ -33,7 +36,7 @@ export const NavBar = () => {
                    </>
                ) : null
                }
-           </>
+           </div>
         )
     }
 

@@ -95,6 +95,15 @@ a:visited {
   }
 }
 
+.logged__nav {
+  @include center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+
+
 .not__found {
   height: 100vh;
   display: flex;

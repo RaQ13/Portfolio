@@ -20,7 +20,6 @@ export const Login = () => {
     );
     const { email, password } = inputsContent;
     const [error, setError] = useState(false);
-    const [path, setPath] = useState("");
 
     const handleInputChange = (ev) => {
         console.log(ev.target)
@@ -41,7 +40,6 @@ export const Login = () => {
     const errorLogin = () => {
         if (error === false) {
             handleSignIn()
-            setPath("/home");
         }
     }
 
@@ -54,29 +52,29 @@ export const Login = () => {
                 <DecoratedHeader text={`Zaloguj się`}/>
                 <form className="login__form">
                     <label>Email</label>
-                    <input value={email}
-                           type="email"
-                           name="email"
-                           required
-                           onChange={handleInputChange}/>
+                    <input
+                        value={email}
+                        type="email"
+                        name="email"
+                        required
+                        onChange={handleInputChange}
+                    />
                     <label>Hasło</label>
-                    <input value={password}
-                           type="password"
-                           name="password"
-                           required
-                           onChange={handleInputChange}/>
+                    <input
+                        value={password}
+                        type="password"
+                        name="password"
+                        required
+                        onChange={handleInputChange}
+                    />
                 </form>
                 <div className="login__buttons">
-                   <Router>
-                       <HashLink onClick={errorLogin}>
-                           <Link to={path}>
-                               <Button text={`Zaloguj się`}/>
-                           </Link>
+                       <HashLink onClick={() => {errorLogin();}} >
+                           <Button text={`Zaloguj się`}/>
                        </HashLink>
                        <HashLink to="/register">
                            <Button text={`Załóż konto`}/>
                        </HashLink>
-                   </Router>
                 </div>
             </div>
         </div>
